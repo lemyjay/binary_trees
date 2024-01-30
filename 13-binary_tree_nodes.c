@@ -1,23 +1,22 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_nodes - A function that counts the nodes with
- * at least 1 child in a binary tree.
+ * binary_tree_balance - A function that measures the balance factor of a binary tree
  *
- * @tree: A pointer to the root node of the tree to count the number of nodes.
+ * @tree: A pointer to the root node of the tree to measure the balance factor.
  *
- * Return: Number of nodes with at least 1 child or 0 if tree is NULL
+ * Return: Balance factor or 0 if tree is NULL
  * A NULL pointer is not a node
  */
-size_t binary_tree_nodes(const binary_tree_t *tree)
+int binary_tree_balance(const binary_tree_t *tree)
 {
+    int left_height, right_height;
+
 	if (tree == NULL)
 		return (0);
 
-	if (tree->left != NULL || tree->right != NULL)
-		return (
-				1 + binary_tree_nodes(tree->left) + binary_tree_nodes(tree->right)
-				);
+    left_height = tree->left ? (int)binary_tree_height(tree->left) : -1;
+    right_height = tree->right ? (int)binary_tree_height(tree->right) : -1;
 
-	return (0);
+    return (left_height - right_height);	
 }
