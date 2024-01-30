@@ -33,7 +33,7 @@ int BT_is_full(const binary_tree_t *tree)
  *
  * Return: Height of the binary tree or 0 if tree is NULL.
  */
-size_t BT_height(const binary_tree_t *tree)
+int BT_height(const binary_tree_t *tree)
 {
 	size_t left_height, right_height;
 
