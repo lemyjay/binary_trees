@@ -130,5 +130,5 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
     num_nodes = (1 << (left_height + 1)) - 1;
 
     /* Check if the number of nodes meets the perfect binary tree condition */
-    return (num_nodes == (int)Bbinary_tree_nodes(tree));
+    return (num_nodes == (int)binary_tree_nodes(tree));
 }
