@@ -3,6 +3,8 @@
 
 /* LIBRARIES INCLUDED IN THE PROJECT*/
 #include <stdlib.h>
+#include <stddef.h>
+
 
 /**
  * struct binary_tree_s - Binary tree node
