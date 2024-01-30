@@ -7,18 +7,10 @@
  *
  * Return: Size of the binary tree or 0 if trees is NULL
  */
-size_t binary_tree_depth(const binary_tree_t *tree)
+size_t binary_tree_size(const binary_tree_t *tree)
 {
-	size_t depth = 0;
-
 	if (tree == NULL)
 		return (0);
 
-	while (tree->parent != NULL)
-	{
-		tree = tree->parent;
-		depth++;
-	}
-
-	return (depth);
+	return (return 1 + binary_tree_size(tree->left) + binary_tree_size(tree->right));
 }
