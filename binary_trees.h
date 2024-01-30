@@ -3,6 +3,8 @@
 
 /* LIBRARIES INCLUDED IN THE PROJECT*/
 #include <stdlib.h>
+#include <stddef.h>
+#include <stdbool.h>
 
 
 /**
