@@ -77,21 +77,25 @@ int BT_nodes(const binary_tree_t *tree)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-    int left_height, right_height, num_nodes;
+	int left_height, right_height, num_nodes;
 
-    if (tree == NULL)
-        return (0);
+	if (tree == NULL)
+		return (0);
 
-    left_height = BT_height(tree->left);
-    right_height = BT_height(tree->right);
+	left_height = BT_height(tree->left);
+	right_height = BT_height(tree->right);
 
-    /* Check if the tree is full and the left and right subtrees have the same height */
-    if (!BT_is_full(tree) || left_height != right_height)
-        return (0);
+	/* Check if the tree is full */
+	/* And the left and right subtrees have the same height */
+	if (!BT_is_full(tree) || left_height != right_height)
+		return (0);
 
-    /* Calculate the number of nodes */
-    num_nodes = (1 << (left_height + 1)) - 1;
+	/* Calculate the number of nodes */
+	num_nodes = (1 << (left_height + 1)) - 1;
 
-    /* Check if the number of nodes meets the perfect binary tree condition */
-    return (num_nodes == BT_nodes(tree));
+	/**
+	 * Check if the number of nodes meets the
+	 * perfect binary tree condition
+	 */
+	return (num_nodes == BT_nodes(tree));
 }
