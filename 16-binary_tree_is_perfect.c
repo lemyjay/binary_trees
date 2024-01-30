@@ -55,7 +55,7 @@ size_t BT_height(const binary_tree_t *tree)
  * Return: Number of nodes with at least 1 child or 0 if tree is NULL
  * A NULL pointer is not a node
  */
-size_t BT_nodes(const binary_tree_t *tree)
+int BT_nodes(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
