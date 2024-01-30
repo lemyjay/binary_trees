@@ -16,13 +16,13 @@ int BT_is_full(const binary_tree_t *tree)
 	if (tree->left == NULL && tree->right == NULL)
 		return (1);
 
-	/* If the node has two children, check if both subtrees are full 
+	If the node has two children, check if both subtrees are full 
 	if (tree->left && tree->right)
 		return (
 				BT_is_full(tree->left) && BT_is_full(tree->right)
 				);
 
-	/* If the node has only one child, the tree is not full 
+	If the node has only one child, the tree is not full 
 	return (0);*/
 
     /* If the node has exactly one child, the tree is not full */
