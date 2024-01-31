@@ -10,17 +10,15 @@
  */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
 {
-    binary_tree_t *first_t = first, *second_t = second;
-
     if (first == NULL || second == NULL)
         return (NULL);
     
     if (first->parent == second->parent)
-        return (first_t->parent);
+        return ((binary_tree_t *)first->parent);
     else if (first->parent == second)
-        return (second_t);
+        return ((binary_tree_t *)second);
     else if (second->parent == first)
-        return (first_t);
+        return ((binary_tree_t *)first);
     else
         binary_trees_ancestor(first->parent, second->parent);
     
